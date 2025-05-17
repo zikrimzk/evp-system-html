@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVP - Event Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    </header>
+
+    <nav id="sidebar">
+        <div class="nav-header">
+            <h2>EVP System</h2>
+            <button id="close-nav" aria-label="Close menu">&times;</button>
+        </div>
+        <ul>
+            <li><a href="javascript:void(0)" id="homepage">Home</a></li>
+            <li><a href="javascript:void(0)" id="manage-event-page">Manage Event</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <section id="homepage-section">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Welcome to EVP System</h4>
+                </div>
+                <div class="card-body">
+                    <p style="margin-bottom: 10px;">Easily manage your events like birthdays, weddings, and corporate
+                        functions.</p>
+                    <p>Click on the <strong>“Manage Event”</strong> to get started.</p>
+                    <hr>
+                    <p>Name : <strong>Muhammad Zikri Bin Kashim</strong></p>
+                    <p>Matric No : <strong>B032320063</strong></p>
+                    <p>Programme/Section : <strong>BITS / S1G2</strong></p>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="manage-event-section">
+            <div class="card" id="manage-event-form">
+                <div class="card-header">
+                    <h4>Manage Event</h4>
+                </div>
+                <div class="card-body">
+                    <input type="text" id="event-name" class="form-control" placeholder="Event Name">
+                    <input type="text" id="event-venue" class="form-control" placeholder="Event Venue">
+                    <div class="form-row">
+                        <div>
+                            <input type="date" id="event-date" class="form-control" placeholder="Date">
+                        </div>
+                        <div>
+                            <input type="time" id="event-start-time" class="form-control" placeholder="Start Time">
+                        </div>
+                        <div>
+                            <input type="time" id="event-end-time" class="form-control" placeholder="End Time">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer" style="margin-top: 10px;">
+                    <button class="btn btn-reset" onclick="resetForm()">Reset</button>
+                    <button class="btn btn-add" onclick="addEvent()">Add Event</button>
+                </div>
+            </div>
+            <div id="event-list"></div>
+        </section>
+    </div>
+    <script type="text/javascript" src="myscript.js"></script>
+</body>
+</html>
